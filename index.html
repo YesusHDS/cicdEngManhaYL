@@ -11,12 +11,25 @@
             height: 200px;
             background-color: red;
 
-            transition: all ease 2s;
+            /* transition: all ease 2s; */
+            animation: animation 2s infinite;
         }
 
-        div:hover{
+        /* div:hover{
             background-color: yellow;
             transform: rotate(360deg);
+        } */
+
+        @keyframes animation{
+            from{
+                background-color: red;
+                transform: rotate(0);
+            }
+
+            to {
+                background-color: yellow;
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
