@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
+        .pai{
             width: 200px;
             height: 200px;
-            background-color: red;
+            
 
             /* transition: all ease 2s; */
-            animation: animation 2s infinite forwards;
+            animation: giro linear 1s infinite forwards;
+        }
+        
+        .filho{
+            width: 200px;
+            height: 200px;
+
+            animation: cor linear 1s infinite alternate;
         }
 
         /* div:hover{
@@ -20,15 +27,23 @@
             transform: rotate(360deg);
         } */
 
-        @keyframes animation{
+        @keyframes giro{
             from{
-                background-color: red;
                 transform: rotate(0);
             }
 
             to {
-                background-color: yellow;
-                transform: rotate(360deg);
+                transform: rotate(90deg);
+            }
+        }
+
+        @keyframes cor{
+            from{
+                background-color: purple;
+            }
+
+            to {
+                background-color: blueviolet;
             }
         }
     </style>
@@ -36,8 +51,11 @@
 <body>
     <h1>Integração/Entrega Contínua</h1>
     <p>oi</p>
-    <div>
+    <div class="pai">
+        <div class="filho">
 
+        </div>
     </div>
+    
 </body>
 </html>
